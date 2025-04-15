@@ -1,5 +1,11 @@
 services:
   forge:
+    runtime: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
     build: .
     ports:
       - "1234:1234"
