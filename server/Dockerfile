@@ -1,5 +1,5 @@
 FROM nvidia/cuda:12.1.1-cudnn8-runtime-ubuntu22.04
-RUN apt-get update && apt-get install -y git python3 python3-pip python3-venv
+RUN apt-get update && apt-get install -y git python3 python3-pip python3-venv ffmpeg libsm6 libxext6
 RUN ln -sf /usr/bin/python3 /usr/bin/python
 
 WORKDIR /WORKDIR
