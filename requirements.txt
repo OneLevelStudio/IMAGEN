@@ -1,0 +1,10 @@
+ipykernel
+ipywidgets
+
+requests
+# gradio
+# fastapi
+# uvicorn
+
+# deepface
+# tf-keras

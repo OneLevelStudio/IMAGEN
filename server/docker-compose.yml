@@ -1,0 +1,5 @@
+services:
+  forge:
+    build: .
+    ports:
+      - "1234:1234"
