@@ -4,7 +4,10 @@ WORKDIR /WORKDIR
 
 RUN git clone --depth 1 --branch main https://github.com/OneLevelStudio/FORGE .                                                  && \
     printf 'venv_dir="-"' >> webui-user.sh                                                                                       && \
+    wget -P models/Lora https://huggingface.co/onelevelstudio/diffusion/resolve/main/1439962/LORA_LEAKCORE_V1.safetensors        && \
     wget -P models/Lora https://huggingface.co/onelevelstudio/diffusion/resolve/main/375993/LORA_GHOST.safetensors               && \
+    wget -P models/Lora https://huggingface.co/onelevelstudio/diffusion/resolve/main/000000/LORA_GHXSTMSK_SDXL_V1.safetensors    && \
+    wget -P models/Lora https://huggingface.co/onelevelstudio/diffusion/resolve/main/000000/LORA_GHXSTMSK_LVSTIFY_V1.safetensors && \
     wget -P models/Stable-diffusion https://huggingface.co/onelevelstudio/diffusion/resolve/main/573152/LVSTIFY_V5.0.safetensors
 
 EXPOSE 1234
