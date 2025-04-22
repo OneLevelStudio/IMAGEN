@@ -11,3 +11,7 @@ Remove everything               docker stop $(docker ps -a -q); docker rm -f $(d
 Push to Docker Hub              1. docker login
                                 2. docker tag imagelocal onelevelstudio/imagehub:tag01
                                 3. docker push onelevelstudio/imagehub:tag01
+
+
+docker tag forge-server-forge-server onelevelstudio/forge
+docker push onelevelstudio/forge
