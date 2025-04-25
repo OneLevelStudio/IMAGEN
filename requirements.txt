@@ -2,7 +2,7 @@ ipykernel
 ipywidgets
 
 requests
-# gradio
+gradio
 # fastapi
 # uvicorn
 
