@@ -32,10 +32,10 @@ theme = gr.themes.Base(
 head = """
 <link rel="icon" href="https://cdn.jsdelivr.net/gh/OneLevelStudio/CORE/static/favicon.png">
 """
+    # margin-top: 200px;
 css = """
 footer { display: none !important; }
 #btn-1 {
-    margin-top: 200px;
     background: #008170;
     height: 120px;
 }
@@ -75,12 +75,12 @@ with gr.Blocks(title="IMAGEN", theme=theme, head=head, css=css, analytics_enable
             cmp_image_show = gr.Image(None, interactive=False, show_label=False, show_download_button=False, show_fullscreen_button=False)
             cmp_image_path = gr.Text("", interactive=False, container=False)
         with gr.Column():
-            cmp_btn_1 = gr.Button("⭐⭐⭐⭐⭐", elem_id="btn-1")
-            cmp_btn_2 = gr.Button("⭐⭐⭐⭐", elem_id="btn-2")
             cmp_btn_3 = gr.Button("⭐", elem_id="btn-3")
+            cmp_btn_2 = gr.Button("⭐⭐⭐⭐", elem_id="btn-2")
+            cmp_btn_1 = gr.Button("⭐⭐⭐⭐⭐", elem_id="btn-1")
     cmp_btn_1.click(fn=fn_yeah_1, inputs=[cmp_image_path], outputs=[cmp_image_path, cmp_image_show], show_progress="hidden")
     cmp_btn_2.click(fn=fn_yeah_2, inputs=[cmp_image_path], outputs=[cmp_image_path, cmp_image_show], show_progress="hidden")
     cmp_btn_3.click(fn=fn_yeah_3, inputs=[cmp_image_path], outputs=[cmp_image_path, cmp_image_show], show_progress="hidden")
 
 if __name__ == "__main__":
-    demo.launch(server_name="127.0.0.1", server_port=1234, inbrowser=True)
+    demo.launch(server_name="127.0.0.1", server_port=1234, inbrowser=True, share=False)
