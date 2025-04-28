@@ -7,6 +7,8 @@ RUN git clone --depth 1 --branch main https://github.com/OneLevelStudio/FORGE . 
     wget -P models/Lora https://huggingface.co/onelevelstudio/diffusion/resolve/main/000000/LORA_GHXST_V1.safetensors               && \
     wget -P models/Lora https://huggingface.co/onelevelstudio/diffusion/resolve/main/000000/LORA_GHXST_V2-000005.safetensors        && \
     wget -P models/Lora https://huggingface.co/onelevelstudio/diffusion/resolve/main/000000/LORA_GHXST_V2.safetensors               && \
+    wget -P models/Lora https://huggingface.co/onelevelstudio/diffusion/resolve/main/000000/LORA_GHXST_V3-000005.safetensors        && \
+    wget -P models/Lora https://huggingface.co/onelevelstudio/diffusion/resolve/main/000000/LORA_GHXST_V3.safetensors               && \
     wget -P models/Stable-diffusion https://huggingface.co/onelevelstudio/diffusion/resolve/main/573152/LVSTIFY_V5.0.safetensors
 
 EXPOSE 1234
