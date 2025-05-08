@@ -1,5 +1,5 @@
 services:
-  forge-server:
+  imagen:
     runtime: nvidia
     deploy:
       resources:
