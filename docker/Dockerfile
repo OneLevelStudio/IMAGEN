@@ -4,6 +4,7 @@ WORKDIR /WORKDIR
 
 RUN git clone --depth 1 --branch main https://github.com/OneLevelStudio/FORGE .                                                                    && \
     printf 'venv_dir="-"' >> webui-user.sh                                                                                                         && \
+    mkdir -p models/Lora && mkdir -p models/Stable-diffusion                                                                                       && \
     wget -O models/Lora/LORA_V1.safetensors https://huggingface.co/onelevelstudio/diffusion/resolve/main/000000/LORA_GHXST_V1.safetensors          && \
     wget -O models/Lora/LORA_V2.safetensors https://huggingface.co/onelevelstudio/diffusion/resolve/main/000000/LORA_GHXST_V2.safetensors          && \
     wget -O models/Lora/LORA_V3.safetensors https://huggingface.co/onelevelstudio/diffusion/resolve/main/000000/LORA_GHXST_V3.safetensors          && \
