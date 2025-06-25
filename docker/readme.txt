@@ -12,6 +12,7 @@ Push to Docker Hub              1. docker login
                                 2. docker tag imagelocal onelevelstudio/imagehub:tag01
                                 3. docker push onelevelstudio/imagehub:tag01
 
+docker compose build
 docker login
 docker tag docker-imagen onelevelstudio/imagen
 docker push onelevelstudio/imagen
