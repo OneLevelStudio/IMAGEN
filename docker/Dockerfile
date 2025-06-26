@@ -5,7 +5,14 @@ WORKDIR /WORKDIR
 RUN git clone --depth 1 --branch main https://github.com/OneLevelStudio/FORGE .                                                                    && \
     printf 'venv_dir="-"' >> webui-user.sh                                                                                                         && \
     mkdir -p models/Lora && mkdir -p models/Stable-diffusion                                                                                       && \
-    wget -O models/Stable-diffusion/MODEL.safetensors https://huggingface.co/onelevelstudio/diffusion/resolve/main/827184/WAI_V14.0.safetensors
+    wget -O models/Stable-diffusion/MODEL.safetensors https://huggingface.co/onelevelstudio/IMAGEN/resolve/main/CHECKPOINT/HSK_V2.2.safetensors    && \
+    wget -O models/Stable-diffusion/MODEL.safetensors https://huggingface.co/onelevelstudio/IMAGEN/resolve/main/CHECKPOINT/JNK_V4.0.safetensors    && \
+    wget -O models/Stable-diffusion/MODEL.safetensors https://huggingface.co/onelevelstudio/IMAGEN/resolve/main/CHECKPOINT/NVA_V8.0.safetensors    && \
+    wget -O models/Stable-diffusion/MODEL.safetensors https://huggingface.co/onelevelstudio/IMAGEN/resolve/main/CHECKPOINT/PRF_V1.0.safetensors    && \
+    wget -O models/Stable-diffusion/MODEL.safetensors https://huggingface.co/onelevelstudio/IMAGEN/resolve/main/CHECKPOINT/WAI_V11.0.safetensors   && \
+    wget -O models/Stable-diffusion/MODEL.safetensors https://huggingface.co/onelevelstudio/IMAGEN/resolve/main/CHECKPOINT/WAI_V14.0.safetensors
+
+    # wget -O models/Stable-diffusion/MODEL.safetensors https://huggingface.co/onelevelstudio/diffusion/resolve/main/827184/WAI_V14.0.safetensors
     # wget -O models/Lora/LORA_V1.safetensors https://huggingface.co/onelevelstudio/diffusion/resolve/main/000000/LORA_GHXST_V1.safetensors          && \
     # wget -O models/Lora/LORA_V2.safetensors https://huggingface.co/onelevelstudio/diffusion/resolve/main/000000/LORA_GHXST_V2.safetensors          && \
     # wget -O models/Lora/LORA_V3.safetensors https://huggingface.co/onelevelstudio/diffusion/resolve/main/000000/LORA_GHXST_V3.safetensors          && \
