@@ -1,6 +1,6 @@
 0. git clone https://github.com/OneLevelStudio/IMAGEN
 0. cd IMAGEN/docker
-0. docker compose build
+0. docker compose build --no-cache
 
 ### Docker Hub
 1. docker login
