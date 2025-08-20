@@ -8,7 +8,7 @@ RUN git clone --depth 1 --branch main https://github.com/OneLevelStudio/FORGE . 
 
 RUN wget -O models/Stable-diffusion/LTF_V05.0.safetensors https://huggingface.co/onelevelstudio/IMAGEN/resolve/main/CHECKPOINT/LTF_V05.0.safetensors
 RUN wget -O models/Stable-diffusion/WAI_V11.0.safetensors https://huggingface.co/onelevelstudio/IMAGEN/resolve/main/CHECKPOINT/WAI_V11.0.safetensors
-RUN wget -O models/Lora/LORA_XOUSX.safetensors https://huggingface.co/onelevelstudio/IMAGEN/resolve/main/LORA/LORA_XOUSX.safetensors
+# RUN wget -O models/Lora/LORA_GHXST.safetensors https://huggingface.co/onelevelstudio/IMAGEN/resolve/main/LORA/LORA_GHXST.safetensors
 
 EXPOSE 1234
 CMD ["bash", "webui.sh", "-f"]
