@@ -6,9 +6,12 @@ RUN git clone --depth 1 --branch main https://github.com/OneLevelStudio/FORGE . 
     printf 'venv_dir="-"' >> webui-user.sh                                          && \
     mkdir -p models/Lora && mkdir -p models/Stable-diffusion
 
-RUN wget -O models/Stable-diffusion/LTF_V05.0.safetensors https://huggingface.co/onelevelstudio/IMAGEN/resolve/main/CHECKPOINT/LTF_V05.0.safetensors
-RUN wget -O models/Stable-diffusion/WAI_V11.0.safetensors https://huggingface.co/onelevelstudio/IMAGEN/resolve/main/CHECKPOINT/WAI_V11.0.safetensors
-# RUN wget -O models/Lora/LORA_GHXST.safetensors https://huggingface.co/onelevelstudio/IMAGEN/resolve/main/LORA/LORA_GHXST.safetensors
+# RUN wget -P models/Stable-diffusion https://huggingface.co/onelevelstudio/IMAGEN/resolve/main/CHECKPOINT/LTF_V05.0.safetensors
+# RUN wget -P models/Stable-diffusion https://huggingface.co/onelevelstudio/IMAGEN/resolve/main/CHECKPOINT/WAI_V11.0.safetensors
+RUN wget -P models/Stable-diffusion https://huggingface.co/onelevelstudio/IMAGEN/resolve/main/CHECKPOINT/MJX_V07.0.safetensors
+RUN wget -P models/Stable-diffusion https://huggingface.co/onelevelstudio/IMAGEN/resolve/main/CHECKPOINT/MJX_V07.0_INP.safetensors
+RUN wget -P models/Lora             https://huggingface.co/onelevelstudio/IMAGEN/resolve/main/LORA/LORA_KDL.safetensors
+RUN wget -P models/Lora             https://huggingface.co/onelevelstudio/IMAGEN/resolve/main/LORA/LORA_JDL.safetensors
 
 EXPOSE 1234
 CMD ["bash", "webui.sh", "-f"]
