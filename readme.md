@@ -1,4 +1,8 @@
-### Docker
+### Models Download
+* [Forge](https://raw.githubusercontent.com/OneLevelStudio/IMAGEN/refs/heads/main/docker/forge/Dockerfile)
+* [Comfy](https://raw.githubusercontent.com/OneLevelStudio/IMAGEN/refs/heads/main/docker/comfy/Dockerfile)
+
+### Build and push Docker images
 
 ```
 0. git clone https://github.com/OneLevelStudio/IMAGEN
@@ -17,7 +21,7 @@
 3. docker push ghcr.io/onelevelstudio/imagen:latest
 ```
 
-### Huggingface
+### Download and upload to Huggingface
 
 ```
 1. git clone https://github.com/OneLevelStudio/IMAGEN -> Open `upload.ipynb`
