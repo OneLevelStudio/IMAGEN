@@ -7,8 +7,8 @@
 
 # Docker Hub
 1. docker login
-2. docker tag docker-imagen onelevelstudio/imagen:latest
-3. docker push onelevelstudio/imagen:latest
+2. docker tag docker-forge onelevelstudio/imagen:forge && docker tag docker-comfy onelevelstudio/imagen:comfy
+3. docker push onelevelstudio/imagen:forge && docker push onelevelstudio/imagen:comfy
 
 # Github GHCR
 1. docker login ghcr.io -u baobuiquang -p <PUT_TOKEN_HERE>
