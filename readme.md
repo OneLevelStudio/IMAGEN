@@ -11,14 +11,14 @@
 
 # Docker Hub
 1. docker login
-2. docker tag docker-forge onelevelstudio/imagen:forge && docker tag docker-comfy onelevelstudio/imagen:comfy
-3. docker push onelevelstudio/imagen:forge && docker push onelevelstudio/imagen:comfy
+2. docker tag docker-forge onelevelstudio/imagen:forge && docker tag docker-comfy onelevelstudio/imagen:comfy && docker tag docker-forge onelevelstudio/imagen:latest
+3. docker push onelevelstudio/imagen:forge && docker push onelevelstudio/imagen:comfy && docker push onelevelstudio/imagen:latest
 
 # Github GHCR
 1. docker login ghcr.io -u baobuiquang -p <PUT_TOKEN_HERE>
   - Generate Token: https://github.com/settings/tokens/new > 90 days > write:packages
-2. docker tag docker-imagen ghcr.io/onelevelstudio/imagen:latest
-3. docker push ghcr.io/onelevelstudio/imagen:latest
+2. docker tag docker-forge ghcr.io/onelevelstudio/imagen:forge && docker tag docker-comfy ghcr.io/onelevelstudio/imagen:comfy && docker tag docker-forge ghcr.io/onelevelstudio/imagen:latest
+3. docker push ghcr.io/onelevelstudio/imagen:forge && docker push ghcr.io/onelevelstudio/imagen:comfy && docker push ghcr.io/onelevelstudio/imagen:latest
 ```
 
 ### Download and upload to Huggingface
