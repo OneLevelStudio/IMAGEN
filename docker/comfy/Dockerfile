@@ -4,12 +4,12 @@ WORKDIR /WORKDIR
 
 RUN pip install -q torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 
-RUN git clone --depth 1 --branch master https://github.com/comfyanonymous/ComfyUI COMFY      && \
-    pip install -r COMFY/requirements.txt                                                    && \
-    mkdir -p COMFY/custom_nodes                                                              && \
-    git clone https://github.com/ltdrdata/ComfyUI-Manager COMFY/custom_nodes/comfyui-manager
+RUN git clone --depth 1 --branch master https://github.com/comfyanonymous/ComfyUI COMFY       && \
+    pip install -r COMFY/requirements.txt                                                     && \
+    mkdir -p COMFY/custom_nodes                                                               && \
+    git clone https://github.com/Comfy-Org/ComfyUI-Manager COMFY/custom_nodes/comfyui-manager
 
-# RUN git clone https://github.com/ltdrdata/ComfyUI-Manager COMFY/custom_nodes/comfyui-manager
+# RUN git clone https://github.com/Comfy-Org/ComfyUI-Manager COMFY/custom_nodes/comfyui-manager
 
 # RUN wget -P COMFY/models/diffusion_models https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
 # RUN wget -P COMFY/models/diffusion_models https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
