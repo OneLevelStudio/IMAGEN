@@ -1,0 +1,4 @@
+requests
+ipykernel
+ipywidgets
+opencv-python
