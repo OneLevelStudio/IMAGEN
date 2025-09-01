@@ -1,0 +1,7 @@
+ipywidgets
+ipykernel
+
+requests
+
+opencv-python
+mediapipe
