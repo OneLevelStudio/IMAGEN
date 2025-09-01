@@ -2,6 +2,9 @@ ipywidgets
 ipykernel
 
 requests
+fastapi
+uvicorn
+gradio
 
 opencv-python
 mediapipe
