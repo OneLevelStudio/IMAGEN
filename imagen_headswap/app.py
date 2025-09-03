@@ -17,7 +17,28 @@ def fn_update_download_button(gr_imagepreview):
         return gr.DownloadButton(label=f"Download {new_file_name}", value=new_file_path, visible=True)
     return None
 
-with gr.Blocks() as demo:
+# ====================================================================================================
+
+theme = gr.themes.Base(
+    primary_hue="slate",
+    secondary_hue="slate",
+    neutral_hue="neutral",
+    radius_size="lg",
+    font=[gr.themes.GoogleFont('Inter')], 
+    font_mono=[gr.themes.GoogleFont('Ubuntu Mono')]
+)
+head = """
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/OneLevelStudio/CORE/STATIC/1LV_LOGO_DARK.png">
+"""
+css = """
+* { -ms-overflow-style: none; scrollbar-width: none; }
+*::-webkit-scrollbar { display: none; }
+footer { display: none !important; }
+"""
+
+# ====================================================================================================
+
+with gr.Blocks(title="FORGE Extra App", theme=theme, css=css, head=head, analytics_enabled=False) as demo:
     with gr.Tab("Create Mask"):
         with gr.Row():
             with gr.Column(min_width=1):
