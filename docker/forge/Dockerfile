@@ -4,15 +4,7 @@ WORKDIR /WORKDIR
 
 RUN git clone --depth 1 --branch main https://github.com/OneLevelStudio/FORGE FORGE     && \
     printf 'venv_dir="-"' >> FORGE/webui-user.sh                                        && \
-    mkdir -p FORGE/models/Lora && mkdir -p FORGE/models/Stable-diffusion
-
-# RUN wget -P FORGE/models/Stable-diffusion https://huggingface.co/onelevelstudio/IMAGEN/resolve/main/CHECKPOINT/LTF_V05.safetensors
-# RUN wget -P FORGE/models/Stable-diffusion https://huggingface.co/onelevelstudio/IMAGEN/resolve/main/CHECKPOINT/WAI_V11.safetensors
-# RUN wget -P FORGE/models/Stable-diffusion https://huggingface.co/onelevelstudio/IMAGEN/resolve/main/CHECKPOINT/MJX_V07.safetensors
-# RUN wget -P FORGE/models/Lora             https://huggingface.co/onelevelstudio/IMAGEN/resolve/main/LORA/LORA_KoreaDL.safetensors
-# RUN wget -P FORGE/models/Lora             https://huggingface.co/onelevelstudio/IMAGEN/resolve/main/LORA/LORA_JapanDL.safetensors
-# RUN wget -P FORGE/models/Lora             https://huggingface.co/onelevelstudio/IMAGEN/resolve/main/LORA/LORA_TaiwnDL.safetensors
-# RUN wget -P FORGE/models/Lora             https://huggingface.co/onelevelstudio/IMAGEN/resolve/main/LORA/LORA_ChinaDL.safetensors
+    mkdir -p FORGE/models/Stable-diffusion && mkdir -p FORGE/models/Lora
 
 EXPOSE 1234
 CMD ["bash", "FORGE/webui.sh", "-f"]
