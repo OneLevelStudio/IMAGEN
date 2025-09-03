@@ -1,11 +1,11 @@
 ### Models Download
 * FORGE
   ```
-  curl -fsSL https://raw.githubusercontent.com/OneLevelStudio/IMAGEN/refs/heads/main/docker/forge/download_models.sh | bash
+  wget https://raw.githubusercontent.com/OneLevelStudio/IMAGEN/refs/heads/main/docker/forge/download_models.sh && bash download_models.sh
   ```
 * COMFY
   ```
-  curl -fsSL https://raw.githubusercontent.com/OneLevelStudio/IMAGEN/refs/heads/main/docker/comfy/download_models.sh | bash
+  wget https://raw.githubusercontent.com/OneLevelStudio/IMAGEN/refs/heads/main/docker/comfy/download_models.sh && bash download_models.sh
   ```
 
 ### Build and push Docker images
