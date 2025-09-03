@@ -4,10 +4,11 @@ WORKDIR /WORKDIR
 
 RUN pip install -q torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 
-RUN git clone --depth 1 --branch master https://github.com/comfyanonymous/ComfyUI COMFY           && \
-    pip install -r COMFY/requirements.txt                                                         && \
-    mkdir -p COMFY/custom_nodes                                                                   && \
-    git clone https://github.com/Comfy-Org/ComfyUI-Manager COMFY/custom_nodes/comfyui-manager     && \
+RUN git clone --depth 1 --branch master https://github.com/comfyanonymous/ComfyUI COMFY                                                      && \
+    pip install -r COMFY/requirements.txt                                                                                                    && \
+    mkdir -p COMFY/custom_nodes                                                                                                              && \
+    git clone https://github.com/Comfy-Org/ComfyUI-Manager COMFY/custom_nodes/ComfyUI-Manager                                                && \
+    git clone https://github.com/Fannovel16/ComfyUI-Frame-Interpolation COMFY/custom_nodes/ComfyUI-Frame-Interpolation                       && \
     mkdir -p COMFY/models/diffusion_models && mkdir -p COMFY/models/text_encoders && mkdir -p COMFY/models/loras && mkdir -p COMFY/models/vae
 
 EXPOSE 4321
