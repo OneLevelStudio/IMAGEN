@@ -1,9 +1,9 @@
 ### Models Download
-* FORGE
+* [FORGE](https://raw.githubusercontent.com/OneLevelStudio/IMAGEN/refs/heads/main/docker/forge/download_models.sh)
   ```
   wget https://raw.githubusercontent.com/OneLevelStudio/IMAGEN/refs/heads/main/docker/forge/download_models.sh && bash download_models.sh
   ```
-* COMFY
+* [COMFY](https://raw.githubusercontent.com/OneLevelStudio/IMAGEN/refs/heads/main/docker/comfy/download_models.sh)
   ```
   wget https://raw.githubusercontent.com/OneLevelStudio/IMAGEN/refs/heads/main/docker/comfy/download_models.sh && bash download_models.sh
   ```
