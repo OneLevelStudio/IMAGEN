@@ -4,7 +4,8 @@ WORKDIR /WORKDIR
 
 RUN pip install -q torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 
-RUN git clone --depth 1 --branch master https://github.com/comfyanonymous/ComfyUI COMFY                                                      && \
+# RUN git clone --depth 1 --branch master https://github.com/comfyanonymous/ComfyUI COMFY                                                      && \
+RUN git clone --depth 1 --branch master https://github.com/OneLevelStudio/COMFY COMFY                                                        && \
     pip install -r COMFY/requirements.txt                                                                                                    && \
     mkdir -p COMFY/custom_nodes                                                                                                              && \
     git clone https://github.com/Comfy-Org/ComfyUI-Manager COMFY/custom_nodes/ComfyUI-Manager                                                && \
