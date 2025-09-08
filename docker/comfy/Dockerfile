@@ -3,7 +3,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends git wget libgl1
 WORKDIR /WORKDIR
 
 RUN pip install -q torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121                                           && \
-    pip install -q opencv-python
+    pip install -q opencv-python imageio-ffmpeg matplotlib
 
 # RUN git clone --depth 1 --branch master https://github.com/OneLevelStudio/COMFY COMFY                                                      && \
 RUN git clone --depth 1 --branch master https://github.com/comfyanonymous/ComfyUI COMFY                                                      && \
