@@ -8,3 +8,4 @@ gradio
 
 opencv-python
 deepface
+tf-keras # for deepface
