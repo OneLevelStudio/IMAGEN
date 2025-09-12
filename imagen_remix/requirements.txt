@@ -1,11 +1,12 @@
 ipywidgets
 ipykernel
 
-requests
-fastapi
-uvicorn
-gradio
-
 opencv-python
-deepface
-tf-keras # for deepface
+
+requests
+# fastapi
+# uvicorn
+# gradio
+
+# deepface
+# tf-keras # deepface
