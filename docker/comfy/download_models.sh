@@ -1,8 +1,17 @@
-echo "📥 ==================================================================================================== 📥"
+echo "===================================================================================================="
+echo "===================================================================================================="
+echo "===================================================================================================="
 
+wget -P COMFY/models/diffusion_models http://37.27.250.71:8000/W22_I2V_14B_HGH_FP8.safetensors
+wget -P COMFY/models/diffusion_models http://37.27.250.71:8000/W22_I2V_14B_LOW_FP8.safetensors
+wget -P COMFY/models/text_encoders    http://37.27.250.71:8000/UMT5XXL_FP8.safetensors
+wget -P COMFY/models/loras            http://37.27.250.71:8000/W22_I2V_LX2V4S_HGH.safetensors
+wget -P COMFY/models/loras            http://37.27.250.71:8000/W22_I2V_LX2V4S_LOW.safetensors
+wget -P COMFY/models/vae              http://37.27.250.71:8000/W21_VAE.safetensors
 
-
-echo "✅ ==================================================================================================== ✅"
+echo "===================================================================================================="
+echo "===================================================================================================="
+echo "===================================================================================================="
 
 # wget -P COMFY/models/diffusion_models https://huggingface.co/onelevelstudio/VIDGEN/resolve/main/WAN/W22_I2V_14B_HGH_FP8.safetensors
 # wget -P COMFY/models/diffusion_models https://huggingface.co/onelevelstudio/VIDGEN/resolve/main/WAN/W22_I2V_14B_LOW_FP8.safetensors
