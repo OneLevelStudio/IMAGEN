@@ -23,3 +23,16 @@ services:
       dockerfile: Dockerfile
     ports:
       - "4321:4321"
+  remjx:
+    runtime: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    build:
+      context: ./remjx
+      dockerfile: Dockerfile
+    ports:
+      - "1234:1234"
+      - "4321:4321"
