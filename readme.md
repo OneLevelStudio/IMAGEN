@@ -10,6 +10,17 @@
 
 ### Build and push Docker images
 
+New process:
+```
+git clone https://github.com/OneLevelStudio/IMAGEN
+cd IMAGEN/docker
+docker compose build --no-cache
+
+docker tag docker-forge onelevelstudio/imagen:forge && docker tag docker-comfy onelevelstudio/imagen:comfy
+docker push onelevelstudio/imagen:forge && docker push onelevelstudio/imagen:comfy
+```
+
+Old process:
 ```
 git clone https://github.com/OneLevelStudio/IMAGEN
 cd IMAGEN/docker

@@ -4,7 +4,8 @@ WORKDIR /WORKDIR
 
 # ====================================================================================================
 
-RUN pip install -q torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121                                                 && \
+# RUN pip install -q torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121                                                 && \
+RUN pip install -q torch torchvision torchaudio                                                                                                    && \
     pip install -q opencv-python imageio-ffmpeg matplotlib scikit-image diffusers ftfy accelerate gguf sageattention onnx onnxruntime-gpu
 # RUN git clone --depth 1 --branch master https://github.com/OneLevelStudio/COMFY COMFY                                                            && \
 RUN git clone --depth 1 --branch master https://github.com/comfyanonymous/ComfyUI COMFY                                                            && \
