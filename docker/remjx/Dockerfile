@@ -11,8 +11,7 @@ RUN git clone --depth 1 --branch main https://github.com/OneLevelStudio/FORGE FO
 # ====================================================================================================
 
 RUN pip install -q torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121                                                 && \
-    pip install -q opencv-python imageio-ffmpeg matplotlib scikit-image diffusers ftfy accelerate gguf onnx onnxruntime-gpu                        && \
-    pip install -q --no-build-isolation --no-cache-dir sageattention
+    pip install -q opencv-python imageio-ffmpeg matplotlib scikit-image diffusers ftfy accelerate gguf onnx onnxruntime-gpu
 # RUN git clone --depth 1 --branch master https://github.com/OneLevelStudio/COMFY COMFY                                                            && \
 RUN git clone --depth 1 --branch master https://github.com/comfyanonymous/ComfyUI COMFY                                                            && \
     pip install -r COMFY/requirements.txt                                                                                                          && \
