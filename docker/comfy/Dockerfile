@@ -17,10 +17,10 @@ RUN git clone --depth 1 --branch master https://github.com/comfyanonymous/ComfyU
     git clone --depth 1 --branch main https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite                     COMFY/custom_nodes/VideoHelperSuite              && \
     git clone --depth 1 --branch main https://github.com/Fannovel16/ComfyUI-Frame-Interpolation                   COMFY/custom_nodes/FrameInterpolation            && \
     git clone --depth 1 --branch main https://github.com/BigStationW/ComfyUi-Scale-Image-to-Total-Pixels-Advanced COMFY/custom_nodes/ScaleImageAdvanced            && \
-    # git clone --depth 1 --branch main https://github.com/kijai/ComfyUI-WanVideoWrapper                            COMFY/custom_nodes/WanVideoWrapper               && \
-    # git clone --depth 1 --branch main https://github.com/kijai/ComfyUI-KJNodes                                    COMFY/custom_nodes/KJNodes                       && \
-    # git clone --depth 1 --branch main https://github.com/kijai/ComfyUI-segment-anything-2                         COMFY/custom_nodes/SegmentAnything2              && \
-    # git clone --depth 1 --branch main https://github.com/ClownsharkBatwing/RES4LYF                                COMFY/custom_nodes/RES4LYF                       && \
+    git clone --depth 1 --branch main https://github.com/kijai/ComfyUI-KJNodes                                    COMFY/custom_nodes/KJNodes                       && \
+    git clone --depth 1 --branch main https://github.com/ClownsharkBatwing/RES4LYF                                COMFY/custom_nodes/RES4LYF                       && \
+    git clone --depth 1 --branch main https://github.com/kijai/ComfyUI-WanVideoWrapper                            COMFY/custom_nodes/WanVideoWrapper               && \
+    git clone --depth 1 --branch main https://github.com/kijai/ComfyUI-segment-anything-2                         COMFY/custom_nodes/SegmentAnything2              && \
     # git clone --depth 1 --branch main https://github.com/rgthree/rgthree-comfy                                    COMFY/custom_nodes/RGThree                       && \
     mkdir -p COMFY/models/diffusion_models && mkdir -p COMFY/models/text_encoders && mkdir -p COMFY/models/loras && mkdir -p COMFY/models/vae
 
