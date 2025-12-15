@@ -5,6 +5,7 @@ WORKDIR /WORKDIR
 
 # ====================================================================================================
 
+RUN pip install -q torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 RUN git clone --depth 1 --branch main https://github.com/OneLevelStudio/FORGE FORGE     && \
     echo 'venv_dir="-"' >> FORGE/webui-user.sh                                          && \
     echo 'export COMMANDLINE_ARGS="$COMMANDLINE_ARGS --skip-torch-cuda-test --use-cpu all --precision full"' >> FORGE/webui-user.sh     && \
