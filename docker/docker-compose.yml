@@ -1,16 +1,16 @@
 services:
-  forge:
-    runtime: nvidia
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - capabilities: [gpu]
-    build:
-      context: ./forge
-      dockerfile: Dockerfile
-    ports:
-      - "1234:1234"
+  # forge:
+  #   runtime: nvidia
+  #   deploy:
+  #     resources:
+  #       reservations:
+  #         devices:
+  #           - capabilities: [gpu]
+  #   build:
+  #     context: ./forge
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "1234:1234"
   comfy:
     runtime: nvidia
     deploy:
@@ -20,6 +20,12 @@ services:
             - capabilities: [gpu]
     build:
       context: ./comfy
+      dockerfile: Dockerfile
+    ports:
+      - "4321:4321"
+  comfy-cpu:
+    build:
+      context: ./comfy-cpu
       dockerfile: Dockerfile
     ports:
       - "4321:4321"
