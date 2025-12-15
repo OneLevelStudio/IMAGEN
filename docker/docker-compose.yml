@@ -1,16 +1,18 @@
 services:
-  # forge:
-  #   runtime: nvidia
-  #   deploy:
-  #     resources:
-  #       reservations:
-  #         devices:
-  #           - capabilities: [gpu]
-  #   build:
-  #     context: ./forge
-  #     dockerfile: Dockerfile
-  #   ports:
-  #     - "1234:1234"
+  # --------------------------------------------------
+  forge:
+    runtime: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    build:
+      context: ./forge
+      dockerfile: Dockerfile
+    ports:
+      - "1234:1234"
+  # --------------------------------------------------
   comfy:
     runtime: nvidia
     deploy:
@@ -23,12 +25,21 @@ services:
       dockerfile: Dockerfile
     ports:
       - "4321:4321"
+  # --------------------------------------------------
+  forge-cpu:
+    build:
+      context: ./forge-cpu
+      dockerfile: Dockerfile
+    ports:
+      - "1234:1234"
+  # --------------------------------------------------
   comfy-cpu:
     build:
       context: ./comfy-cpu
       dockerfile: Dockerfile
     ports:
       - "4321:4321"
+  # --------------------------------------------------
   # remjx:
   #   runtime: nvidia
   #   deploy:
@@ -42,3 +53,4 @@ services:
   #   ports:
   #     - "1234:1234"
   #     - "4321:4321"
+  # --------------------------------------------------
