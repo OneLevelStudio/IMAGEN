@@ -6,7 +6,7 @@ WORKDIR /WORKDIR
 # ====================================================================================================
 
 RUN git clone --depth 1 --branch main https://github.com/OneLevelStudio/FORGE FORGE     && \
-    echo 'venv_dir="-"' >> FORGE/webui-user.sh                                        && \
+    echo 'venv_dir="-"' >> FORGE/webui-user.sh                                          && \
     mkdir -p FORGE/models/Stable-diffusion && mkdir -p FORGE/models/Lora
 
 # ====================================================================================================
