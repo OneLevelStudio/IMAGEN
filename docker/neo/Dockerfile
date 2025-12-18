@@ -4,7 +4,7 @@ WORKDIR /WORKDIR
 
 RUN git clone --depth 1 --branch neo "https://github.com/Haoming02/sd-webui-forge-classic" NEO                  && \
     echo 'venv_dir="-"' >> NEO/webui-user.sh                                                                    && \
-    echo 'export COMMANDLINE_ARGS="--no-download-sd-model --api --listen --port 1234"' >> NEO/webui-user.sh
+    echo 'export COMMANDLINE_ARGS="--api --listen --port 1234"' >> NEO/webui-user.sh
 
 COPY webui.sh NEO/
 
