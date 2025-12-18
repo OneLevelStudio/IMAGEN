@@ -5,7 +5,8 @@ WORKDIR /WORKDIR
 
 # ====================================================================================================
 
-RUN pip install --root-user-action=ignore -q torch torchvision torchaudio --index-url "https://download.pytorch.org/whl/cu121"
+RUN pip install --root-user-action=ignore -q torch torchvision torchaudio --index-url "https://download.pytorch.org/whl/cu121"                                && \
+    pip install --root-user-action=ignore -q opencv-python matplotlib gguf ftfy imageio-ffmpeg scikit-image diffusers accelerate pywavelets onnx onnxruntime-gpu
 RUN git clone --depth 1 --branch master "https://github.com/comfyanonymous/ComfyUI" COMFY                                                                     && \
     pip install -r COMFY/requirements.txt
 RUN mkdir -p COMFY/custom_nodes                                                                                                                               && \

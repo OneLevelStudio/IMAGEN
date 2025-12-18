@@ -5,7 +5,6 @@ WORKDIR /WORKDIR
 
 # ====================================================================================================
 
-RUN pip install --root-user-action=ignore -q torch torchvision torchaudio --index-url "https://download.pytorch.org/whl/cu121"
 RUN git clone --depth 1 --branch main "https://github.com/OneLevelStudio/FORGE" FORGE                                                      && \
     echo 'venv_dir="-"' >> FORGE/webui-user.sh                                                                                             && \
     mkdir -p FORGE/extensions && mkdir -p FORGE/models/Stable-diffusion && mkdir -p FORGE/models/Lora
