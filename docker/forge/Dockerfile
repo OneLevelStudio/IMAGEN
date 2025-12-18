@@ -5,11 +5,9 @@ WORKDIR /WORKDIR
 
 # ====================================================================================================
 
-RUN pip install --root-user-action=ignore -q torch torchvision torchaudio --index-url "https://download.pytorch.org/whl/cu121"             && \
-    pip install --root-user-action=ignore -q insightface==0.7.3 albumentations==1.4.3 onnx==1.16.1 opencv-python>=4.7.0.72
+RUN pip install --root-user-action=ignore -q torch torchvision torchaudio --index-url "https://download.pytorch.org/whl/cu121"
 RUN git clone --depth 1 --branch main "https://github.com/OneLevelStudio/FORGE" FORGE                                                      && \
     echo 'venv_dir="-"' >> FORGE/webui-user.sh                                                                                             && \
-    git clone --depth 1 --branch main "https://codeberg.org/Gourieff/sd-webui-reactor" FORGE/extensions/sd-webui-reactor                   && \
     mkdir -p FORGE/extensions && mkdir -p FORGE/models/Stable-diffusion && mkdir -p FORGE/models/Lora
 RUN mkdir -p FORGE/models/RealESRGAN && mkdir -p FORGE/models/GFPGAN                                                                       && \
     wget -P FORGE/models/RealESRGAN "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth"                && \
