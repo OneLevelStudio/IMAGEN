@@ -6,7 +6,7 @@ RUN git clone --depth 1 --branch neo "https://github.com/Haoming02/sd-webui-forg
     echo 'venv_dir="-"' >> NEO/webui-user.sh                                                                    && \
     echo 'export COMMANDLINE_ARGS="--api --listen --port 1234"' >> NEO/webui-user.sh
 
-COPY webui.sh NEO/
+COPY webui.sh NEO/webui.sh
 
 EXPOSE 1234
 CMD ["bash", "NEO/webui.sh", "-f"]
