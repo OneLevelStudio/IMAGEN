@@ -8,7 +8,7 @@ WORKDIR /WORKDIR
 RUN git clone --depth 1 --branch main "https://github.com/OneLevelStudio/FORGE" FORGE                                                      && \
     pip install --no-cache-dir -r FORGE/requirements_versions.txt                                                                          && \
     echo 'venv_dir="-"' >> FORGE/webui-user.sh
-RUN pip install --no-cache-dir -q svglib==1.5.1 insightface==0.7.3 sentencepiece
+RUN pip install --no-cache-dir -q svglib==1.5.1 insightface==0.7.3 sentencepiece==0.2.1
 RUN mkdir -p FORGE/models/RealESRGAN && mkdir -p FORGE/models/GFPGAN                                                                       && \
     wget -P FORGE/models/RealESRGAN "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth"                && \
     wget -P FORGE/models/RealESRGAN "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.4/RealESRGAN_x4plus_anime_6B.pth"     && \
