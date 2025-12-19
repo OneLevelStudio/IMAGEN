@@ -6,12 +6,6 @@ git clone https://github.com/OneLevelStudio/IMAGEN
 cd IMAGEN/docker
 docker compose build --no-cache
 
-docker tag docker-forge onelevelstudio/imagen:forge
-docker tag docker-comfy onelevelstudio/imagen:comfy
-docker tag docker-remjx onelevelstudio/imagen:remjx
-docker tag docker-forge-cpu onelevelstudio/imagen:forge-cpu
-docker tag docker-comfy-cpu onelevelstudio/imagen:comfy-cpu
-
 docker push onelevelstudio/imagen:forge
 docker push onelevelstudio/imagen:comfy
 docker push onelevelstudio/imagen:remjx

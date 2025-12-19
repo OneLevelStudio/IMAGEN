@@ -1,6 +1,7 @@
 services:
   # --------------------------------------------------
   forge:
+    image: onelevelstudio/imagen:forge
     runtime: nvidia
     deploy:
       resources:
@@ -13,20 +14,22 @@ services:
     ports:
       - "1234:1234"
   # --------------------------------------------------
-  comfy:
-    runtime: nvidia
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - capabilities: [gpu]
-    build:
-      context: ./comfy
-      dockerfile: Dockerfile
-    ports:
-      - "4321:4321"
+  # comfy:
+  #   image: onelevelstudio/imagen:comfy
+  #   runtime: nvidia
+  #   deploy:
+  #     resources:
+  #       reservations:
+  #         devices:
+  #           - capabilities: [gpu]
+  #   build:
+  #     context: ./comfy
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "4321:4321"
   # --------------------------------------------------
   # forge-cpu:
+  #   image: onelevelstudio/imagen:forge-cpu
   #   build:
   #     context: ./forge-cpu
   #     dockerfile: Dockerfile
@@ -34,6 +37,7 @@ services:
   #     - "1234:1234"
   # --------------------------------------------------
   # comfy-cpu:
+  #   image: onelevelstudio/imagen:comfy-cpu
   #   build:
   #     context: ./comfy-cpu
   #     dockerfile: Dockerfile
@@ -41,6 +45,7 @@ services:
   #     - "4321:4321"
   # --------------------------------------------------
   # remjx:
+  #   image: onelevelstudio/imagen:remjx
   #   runtime: nvidia
   #   deploy:
   #     resources:
