@@ -6,8 +6,8 @@ WORKDIR /WORKDIR
 # ====================================================================================================
 
 RUN git clone --depth 1 --branch master "https://github.com/comfyanonymous/ComfyUI" COMFY                                                                 && \
-    pip install -r COMFY/requirements.txt
-RUN pip install -q opencv-python matplotlib gguf ftfy imageio-ffmpeg scikit-image diffusers accelerate pywavelets onnx onnxruntime-gpu
+    pip install --no-cache-dir -r COMFY/requirements.txt
+RUN pip install --no-cache-dir -q opencv-python matplotlib gguf ftfy imageio-ffmpeg scikit-image diffusers accelerate pywavelets onnx onnxruntime-gpu
 RUN mkdir -p COMFY/custom_nodes                                                                                                                           && \
     git clone --depth 1 --branch main "https://github.com/Comfy-Org/ComfyUI-Manager"                                COMFY/custom_nodes/Manager            && \
     git clone --depth 1 --branch main "https://github.com/cubiq/ComfyUI_essentials"                                 COMFY/custom_nodes/Essentials         && \

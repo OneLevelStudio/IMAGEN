@@ -6,9 +6,9 @@ WORKDIR /WORKDIR
 # ====================================================================================================
 
 RUN git clone --depth 1 --branch main "https://github.com/OneLevelStudio/FORGE" FORGE                                                      && \
-    pip install -r FORGE/requirements_versions.txt                                                                                         && \
+    pip install --no-cache-dir -r FORGE/requirements_versions.txt                                                                          && \
     echo 'venv_dir="-"' >> FORGE/webui-user.sh
-RUN pip install -q svglib==1.5.1 insightface==0.7.3
+RUN pip install --no-cache-dir -q svglib==1.5.1 insightface==0.7.3
 RUN mkdir -p FORGE/models/RealESRGAN && mkdir -p FORGE/models/GFPGAN                                                                       && \
     wget -P FORGE/models/RealESRGAN "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth"                && \
     wget -P FORGE/models/RealESRGAN "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.4/RealESRGAN_x4plus_anime_6B.pth"     && \
@@ -20,8 +20,8 @@ RUN mkdir -p FORGE/models/RealESRGAN && mkdir -p FORGE/models/GFPGAN            
 # ====================================================================================================
 
 RUN git clone --depth 1 --branch master "https://github.com/comfyanonymous/ComfyUI" COMFY                                                                 && \
-    pip install -r COMFY/requirements.txt
-RUN pip install -q opencv-python matplotlib gguf ftfy imageio-ffmpeg scikit-image diffusers accelerate pywavelets onnx onnxruntime-gpu
+    pip install --no-cache-dir -r COMFY/requirements.txt
+RUN pip install --no-cache-dir -q opencv-python matplotlib gguf ftfy imageio-ffmpeg scikit-image diffusers accelerate pywavelets onnx onnxruntime-gpu
 RUN mkdir -p COMFY/custom_nodes                                                                                                                           && \
     git clone --depth 1 --branch main "https://github.com/Comfy-Org/ComfyUI-Manager"                                COMFY/custom_nodes/Manager            && \
     git clone --depth 1 --branch main "https://github.com/cubiq/ComfyUI_essentials"                                 COMFY/custom_nodes/Essentials         && \
