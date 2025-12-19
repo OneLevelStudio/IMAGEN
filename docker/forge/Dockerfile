@@ -5,6 +5,7 @@ WORKDIR /WORKDIR
 
 # ====================================================================================================
 
+RUN pip install -q svglib==1.5.1
 RUN git clone --depth 1 --branch main "https://github.com/OneLevelStudio/FORGE" FORGE                                                      && \
     echo 'venv_dir="-"' >> FORGE/webui-user.sh                                                                                             && \
     mkdir -p FORGE/extensions && mkdir -p FORGE/models/Stable-diffusion && mkdir -p FORGE/models/Lora
