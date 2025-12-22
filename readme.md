@@ -12,6 +12,9 @@ docker push onelevelstudio/imagen:remjx
 docker push onelevelstudio/imagen:forge-cpu
 docker push onelevelstudio/imagen:comfy-cpu
 ```
+```
+docker push onelevelstudio/imagen:remjx && docker push onelevelstudio/imagen:comfy-cpu && docker push onelevelstudio/imagen:forge-cpu && docker push onelevelstudio/imagen:comfy && docker push onelevelstudio/imagen:forge
+```
 
 Old process:
 ```
