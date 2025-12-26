@@ -8,7 +8,6 @@ docker compose build --no-cache
 
 docker push onelevelstudio/imagen:forge
 docker push onelevelstudio/imagen:comfy
-docker push onelevelstudio/imagen:wangp
 docker push onelevelstudio/imagen:remjx
 docker push onelevelstudio/imagen:forge-cpu
 docker push onelevelstudio/imagen:comfy-cpu

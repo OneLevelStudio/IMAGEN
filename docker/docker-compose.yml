@@ -28,20 +28,6 @@ services:
     ports:
       - "4321:4321"
   # # --------------------------------------------------
-  wangp:
-    image: onelevelstudio/imagen:wangp
-    runtime: nvidia
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - capabilities: [gpu]
-    build:
-      context: ./wangp
-      dockerfile: Dockerfile
-    ports:
-      - "1234:7860"
-  # # --------------------------------------------------
   forge-cpu:
     image: onelevelstudio/imagen:forge-cpu
     build:
