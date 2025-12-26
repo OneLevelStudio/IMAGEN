@@ -1,6 +1,6 @@
 ### Models Download
-* [HF/onelevelstudio/IMAGEN](https://huggingface.co/onelevelstudio/IMAGEN)
-* [HF/onelevelstudio/VIDGEN](https://huggingface.co/onelevelstudio/VIDGEN)
+* [HF/onelevelstudio/IMAGEN](https://huggingface.co/onelevelstudio/IMAGEN/blob/main/README.md)
+* [HF/onelevelstudio/VIDGEN](https://huggingface.co/onelevelstudio/VIDGEN/blob/main/README.md)
 
 ### Build and push Docker images
 
