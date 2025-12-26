@@ -1,3 +1,7 @@
+### Models Download
+* [HF/onelevelstudio/IMAGEN](https://huggingface.co/onelevelstudio/IMAGEN)
+* [HF/onelevelstudio/VIDGEN](https://huggingface.co/onelevelstudio/VIDGEN)
+
 ### Build and push Docker images
 
 New process:
@@ -32,13 +36,3 @@ docker login ghcr.io -u baobuiquang -p <PUT_TOKEN_HERE>
 docker tag docker-forge ghcr.io/onelevelstudio/imagen:forge && docker tag docker-comfy ghcr.io/onelevelstudio/imagen:comfy && docker tag docker-remjx ghcr.io/onelevelstudio/imagen:remjx && docker tag docker-remjx ghcr.io/onelevelstudio/imagen:latest
 docker push ghcr.io/onelevelstudio/imagen:forge && docker push ghcr.io/onelevelstudio/imagen:comfy && docker push ghcr.io/onelevelstudio/imagen:remjx && docker push ghcr.io/onelevelstudio/imagen:latest
 ```
-
-### Models Download
-* [FORGE](https://raw.githubusercontent.com/OneLevelStudio/IMAGEN/refs/heads/main/docker/forge/download_models.sh)
-  ```
-  wget https://raw.githubusercontent.com/OneLevelStudio/IMAGEN/refs/heads/main/docker/forge/download_models.sh && bash download_models.sh
-  ```
-* [COMFY](https://raw.githubusercontent.com/OneLevelStudio/IMAGEN/refs/heads/main/docker/comfy/download_models.sh)
-  ```
-  wget https://raw.githubusercontent.com/OneLevelStudio/IMAGEN/refs/heads/main/docker/comfy/download_models.sh && bash download_models.sh
-  ```
