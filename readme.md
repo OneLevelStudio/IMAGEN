@@ -42,17 +42,3 @@ docker push ghcr.io/onelevelstudio/imagen:forge && docker push ghcr.io/onelevels
   ```
   wget https://raw.githubusercontent.com/OneLevelStudio/IMAGEN/refs/heads/main/docker/comfy/download_models.sh && bash download_models.sh
   ```
-
-### Download and upload to Huggingface
-
-```
-1. git clone https://github.com/OneLevelStudio/IMAGEN -> Open `upload.ipynb`
-2. Select Python Kernel
-3. Edit variables
-  - CivitAI Token:
-    + https://civitai.com/user/account > API Keys > Create and copy CivitAI API key
-  - HF Write Token:
-    + https://huggingface.co/settings/tokens > Create and copy Write Token
-4. Run the notebook
-5. Check https://huggingface.co/onelevelstudio/IMAGEN
-```
