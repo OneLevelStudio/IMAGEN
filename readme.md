@@ -1,6 +1,9 @@
 ### Models Download
 * [HF/onelevelstudio/IMAGEN](https://huggingface.co/onelevelstudio/IMAGEN/blob/main/README.md)
 * [HF/onelevelstudio/VIDGEN](https://huggingface.co/onelevelstudio/VIDGEN/blob/main/README.md)
+```
+wget -P COMFY/models/text_encoders "https://huggingface.co/onelevelstudio/VIDGEN/resolve/main/SHARED/UMT5XXL.safetensors" && wget -P COMFY/models/vae "https://huggingface.co/onelevelstudio/VIDGEN/resolve/main/SHARED/W21_VAE.safetensors" && wget -P COMFY/models/clip_vision "https://huggingface.co/onelevelstudio/VIDGEN/resolve/main/SHARED/CLIPV_H.safetensors" && wget -P COMFY/models/loras "https://huggingface.co/onelevelstudio/VIDGEN/resolve/main/W22_ANI/W22_ANI_RELI.safetensors" && wget -P COMFY/models/loras "https://huggingface.co/onelevelstudio/VIDGEN/resolve/main/W22_ANI/W22_ANI_LX2V.safetensors" && wget -P COMFY/models/diffusion_models "https://huggingface.co/onelevelstudio/VIDGEN/resolve/main/W22_ANI/W22_ANI_FP8.safetensors"
+```
 
 ### Build and push Docker images
 
